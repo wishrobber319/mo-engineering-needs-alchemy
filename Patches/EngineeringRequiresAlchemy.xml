@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+    <!-- Add Alchemy as a prerequisite of Engineering. Engineering already requires Smithing;
+         this appends DankPyon_Alchemy to the same prerequisites list so the research tree forces
+         Alchemy to be completed before Engineering becomes available. Gated on Medieval Overhaul
+         so both defNames are guaranteed to exist. -->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Medieval Overhaul</li>
+        </mods>
+        <match Class="PatchOperationAdd">
+            <xpath>/Defs/ResearchProjectDef[defName="DankPyon_Engineering"]/prerequisites</xpath>
+            <value>
+                <li>DankPyon_Alchemy</li>
+            </value>
+        </match>
+    </Operation>
+
+    <!-- Replace Medieval Overhaul's placeholder Alchemy description ("WIP. research to get
+         advanced research table") with proper flavor text. Gated on Medieval Overhaul so the
+         def exists. -->
+    <Operation Class="PatchOperationFindMod">
+        <mods>
+            <li>Medieval Overhaul</li>
+        </mods>
+        <match Class="PatchOperationReplace">
+            <xpath>/Defs/ResearchProjectDef[defName="DankPyon_Alchemy"]/description</xpath>
+            <value>
+                <description>Study the alchemical arts: the distillation of reagents, the transmutation of base materials, and the brewing of potent elixirs. Mastery of these principles refines raw ingredients into refined compounds and, paired with sound engineering, lays the groundwork for the advanced research bench and the discoveries it makes possible.</description>
+            </value>
+        </match>
+    </Operation>
+
+</Patch>
