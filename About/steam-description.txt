@@ -1,0 +1,9 @@
+[b]Research Alchemy before Engineering.[/b] A small progression tweak that makes Alchemy a prerequisite of Engineering, so the medieval tech tree flows in a logical order on the way to the advanced research bench.
+
+[hr][/hr]
+[b]What's inside[/b]
+[list]
+[*][b]Alchemy gates Engineering.[/b] You research Alchemy first, then Engineering.
+[*][b]Cleaner tech tree.[/b] A logical medieval progression toward the advanced research bench.
+[*][b]Requires Medieval Overhaul.[/b]
+[/list]
